@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интернет Кинотеатр</title>
+    <link rel="stylesheet" href="../css/header_and_footer/menu.css">
+    <link rel="stylesheet" href="../css/film_and_film_detail/cards.css">
+    <link rel="stylesheet" href="../css/header_and_footer/footer.css">
+    <link rel="stylesheet" href="../css/main_page/hello.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <!-- Меню -->
+    <header>
+        <nav class="menu">
+            <ul>
+                <li><a href="#">Главная</a></li>
+                <li><a href="tags/all_products.html">Хэштеги</a></li>
+                <li><a href="films/films.html">Фильмы</a></li>
+                <li>
+                    <a href="parser_films/parser_film_list.html">Другие фильмы</a>
+                    <a href="parser_films/parser_film_list.html">Парсинг</a>
+                </li>
+                <li>
+                    <a href="#">Регистрация</a>
+                    <a href="#">Авторизация</a>
+                </li>
+                <!-- Форма поиска -->
+                <li class="search">
+                    <form>
+                        <input type="text" placeholder="Поиск...">
+                        <button type="submit">Поиск</button>
+                    </form>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+<!-- Карточка пользователей-->
+<div class="w-full max-w-2xl bg-gray-800 p-6 rounded-2xl shadow-xl text-white mx-auto mt-10">
+    <h1 class="text-2xl font-bold text-center mb-4">Список пользователей</h1>
+    <ul class="space-y-4">
+        <!-- Цикл тут -->
+        <li class="p-4 bg-gray-700 rounded-lg shadow">
+            <p><strong>Фамилия:</strong> Иванов</p>
+            <p><strong>Имя:</strong> Иван</p>
+            <p><strong>Возраст:</strong> 23</p>
+            <p><strong>Пол:</strong> м</p>
+            <p><strong>Почта:</strong> ivan@gmail.com</p>
+            <p><strong>Телефон:</strong> 0550123321</p>
+            
+            <p><strong>Образовательный клуб:</strong> взрослый</p>
+        </li>
+        
+    </ul>
+</div>
+
+<!-- Футер -->
+<footer>
+    <p>&copy; 2025 Интернет Кинотеатр | Все права защищены</p>
+    <ul>
+        <li><a href="#">О нас</a></li>
+        <li><a href="#">Контакты</a></li>
+        <li><a href="#">Политика конфиденциальности</a></li>
+    </ul>
+</footer>
+
+
+</body>
+</html>

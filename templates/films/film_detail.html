@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интернет Кинотеатр</title>
+    <link rel="stylesheet" href="../css/header_and_footer/menu.css">
+    <link rel="stylesheet" href="../css/film_and_film_detail/cards.css">
+    <link rel="stylesheet" href="../css/header_and_footer/footer.css">
+    <link rel="stylesheet" href="../css/main_page/hello.css">
+    <link rel="stylesheet" href="../css/film_and_film_detail/film_detail.css">
+</head>
+<body>
+
+<!-- Меню -->
+<header>
+    <nav class="menu">
+        <ul>
+            <li><a href="../index.html">Главная</a></li>
+            <li><a href="#">Хэштеги</a></li>
+            <li><a href="films/films.html">Фильмы</a></li>
+            <li><a href="#">Другие фильмы</a></li>
+            <li><a href="#">Регистрация</a></li>
+            <!-- Форма поиска -->
+            <li class="search">
+                <form>
+                    <input type="text" placeholder="Поиск...">
+                    <button type="submit">Поиск</button>
+                </form>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<!-- о фильме подробнее-->
+<div class="film-detail">
+    <div class="film-info">
+        <img src="https://avatars.mds.yandex.net/get-kinopoisk-image/10592371/f099e8e4-0168-4245-aec4-5fc131176197/220x330"
+             alt="Movie Poster" class="film-poster">
+        <div class="film-text">
+            <h1>Название фильма</h1>
+            <p><strong>Дата выпуска:</strong> 2023-12-01</p>
+            <p><strong>Жанр:</strong> Драма, Приключения</p>
+            <p><strong>Директор:</strong> Драма</p>
+            <p><strong>Описание:</strong> Краткое описание фильма. Здесь рассказывается о сюжете, персонажах и основных
+                событиях.</p>
+        </div>
+            <iframe width="640" height="420" src="https://www.youtube.com/embed/UdaQRvVTIqU?si=Vf1gNZa7al49X1zG" frameborder="0"></iframe>
+
+    </div>
+
+    <!--  Коменты -->
+    <div class="comments">
+        <h2>Комментарии</h2>
+        <div class="comment-list">
+            <!--            цикл открытия-->
+            <div class="comment">
+                <p><strong>Пользователь1:</strong> Отличный фильм! Очень захватывающе!</p>
+            </div>
+            <!--            цикл закрытия -->
+        </div>
+    </div>
+</div>
+
+
+<!-- Футер -->
+<footer>
+    <p>&copy; 2025 Интернет Кинотеатр | Все права защищены</p>
+    <ul>
+        <li><a href="#">О нас</a></li>
+        <li><a href="#">Контакты</a></li>
+        <li><a href="#">Политика конфиденциальности</a></li>
+    </ul>
+</footer>
+
+
+</body>
+</html>

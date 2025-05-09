@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интернет Кинотеатр</title>
+    <link rel="stylesheet" href="{% static 'css/header_and_footer/menu.css' %}">
+    <link rel="stylesheet" href="{% static 'css/film_and_film_detail/cards.css' %}">
+    <link rel="stylesheet" href="{% static 'css/header_and_footer/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main_page/hello.css' %}">
+</head>
+<body>
+    <!-- Меню -->
+     {% include 'components/header.html' %}
+
+
+    <!-- Эмодзи для анимации -->
+    <div class="emoji">{{ emoji }}</div>
+
+    <!-- Карточка приветствия -->
+    <div class="welcome-block">
+        <h2>Добро пожаловать на учебный сайт Django-Templates сайт!</h2>
+        <p> {{ text }} </p>
+        <p>Используя backend</p>
+    </div>
+ 
+      <!-- Бегущая строка -->
+    <div class="marquee-container">
+        <div class="marquee">
+            {{ run_string }}
+        </div>
+    </div>
+
+    <!-- Футер -->
+     {% include 'components/footer.html' %}
+</body>
+</html>

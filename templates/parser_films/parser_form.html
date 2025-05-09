@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интернет Кинотеатр</title>
+    <link rel="stylesheet" href="../css/header_and_footer/menu.css">
+    <link rel="stylesheet" href="../css/film_and_film_detail/cards.css">
+    <link rel="stylesheet" href="../css/header_and_footer/footer.css">
+</head>
+<body>
+
+<!-- Меню -->
+<header>
+    <nav class="menu">
+        <ul>
+            <li><a href="../index.html">Главная</a></li>
+            <li><a href="#">Хэштеги</a></li>
+            <li><a href="#">Фильмы</a></li>
+            <li><a href="#">Другие фильмы</a></li>
+            <li><a href="#">Регистрация</a></li>
+            <!-- Форма поиска -->
+            <li class="search">
+                <form>
+                    <input type="text" placeholder="Поиск...">
+                    <button type="submit">Поиск</button>
+                </form>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
+
+
+<!-- form parser -->
+<div class="form-container">
+  <form method="post" class="form">
+    <h1 class="form-title">Начать Парсинг</h1>
+    {% csrf_token %}
+    <div class="form-content">
+      {{ form.as_p }}
+    </div>
+    <button type="submit" class="submit-btn">Начать</button>
+  </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- Футер -->
+<footer>
+    <p>&copy; 2025 Интернет Кинотеатр | Все права защищены</p>
+    <ul>
+        <li><a href="#">О нас</a></li>
+        <li><a href="#">Контакты</a></li>
+        <li><a href="#">Политика конфиденциальности</a></li>
+    </ul>
+</footer>
+
+
+</body>
+</html>
+
+
+
+
+<style>
+  /* Контейнер для центрирования */
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0; /* Фон страницы */
+}
+
+/* Стили для формы */
+.form {
+  max-width: 400px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  width: 100%;
+}
+
+/* Заголовок формы */
+.form-title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Контейнер для содержимого формы */
+.form-content {
+  margin-bottom: 15px;
+}
+
+/* Стили для кнопки */
+.submit-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+</style>
