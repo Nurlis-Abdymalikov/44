@@ -20,17 +20,16 @@
 <section class="cards">
 
 <!-- цикл тут открытие -->
-    {% for i in films %}
-    <div class="card">
-        <img src="{{ i.image.url }}"
-             alt="{{ i.title }}">
-        <h3><a href="film_detail.html">{{i.title}}</a></h3>
-        <p>{{ i.description }}</p>
-         <div class="card-buttons">
-            <button class="delete"><a href="#">Удалить</a></button>
-            <button class="edit"><a href="#">Изменить</a></button>
+    {% for film in films %}
+        <div class="card">
+            <img src="{{ film.image.url }}" alt="{{ film.title }}">
+            <h3><a href="{% url 'film_detail' film.id %}">{{ film.title }}</a></h3>
+            <p>{{ film.description }}</p>
+            <div class="card-buttons">
+                <button class="delete"><a href="#">Удалить</a></button>
+                <button class="edit"><a href="#">Изменить</a></button>
+            </div>
         </div>
-    </div>
     {% endfor %}
 
 <!-- цикл тут закрытие -->
