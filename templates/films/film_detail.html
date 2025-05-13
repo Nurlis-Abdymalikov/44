@@ -37,9 +37,11 @@
         <h2>Комментарии</h2>
         <div class="comment-list">
             <!--            цикл открытия-->
+            {% for i in film_id.reviews.all %}
             <div class="comment">
-                <p><strong>Пользователь1:</strong> Отличный фильм! Очень захватывающе!</p>
+                <p><strong>{{ i.user_name }}:</strong>{{ i.text }}</p>
             </div>
+            {% endfor %}
             <!--            цикл закрытия -->
         </div>
     </div>

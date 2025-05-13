@@ -1,36 +1,19 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Интернет Кинотеатр</title>
-    <link rel="stylesheet" href="../css/header_and_footer/menu.css">
-    <link rel="stylesheet" href="../css/film_and_film_detail/cards.css">
-    <link rel="stylesheet" href="../css/header_and_footer/footer.css">
-    <link rel="stylesheet" href="../css/tags/all_products.css">
+    <link rel="stylesheet" href="{% static 'css/header_and_footer/menu.css' %}">
+    <link rel="stylesheet" href="{% static 'css/film_and_film_detail/cards.css' %}">
+    <link rel="stylesheet" href="{% static 'css/header_and_footer/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'css/tags/all_products.css' %}">
 </head>
 <body>
 
 <!-- Меню -->
-<header>
-    <nav class="menu">
-        <ul>
-            <li><a href="../index.html">Главная</a></li>
-            <li><a href="#">Хэштеги</a></li>
-            <li><a href="#">Фильмы</a></li>
-            <li><a href="#">Другие фильмы</a></li>
-            <li><a href="#">Регистрация</a></li>
-            <!-- Форма поиска -->
-            <li class="search">
-                <form>
-                    <input type="text" placeholder="Поиск...">
-                    <button type="submit">Поиск</button>
-                </form>
-            </li>
-        </ul>
-    </nav>
-</header>
-
+{% include 'components/header.html' %}
 
 <!-- Карточки всех тэгов -->
 <section class="cards">
@@ -41,7 +24,9 @@
 
         <ul class="product-list">
           <!-- цикл тут открытие -->
-            <li>Вода</li>
+          {% for i in drink %}
+          <li>{{ i.product_name }}</li>
+          {% endfor %}
         </ul>
     </div>
 
@@ -52,14 +37,7 @@
 
 
 <!-- Футер -->
-<footer>
-    <p>&copy; 2025 Интернет Кинотеатр | Все права защищены</p>
-    <ul>
-        <li><a href="#">О нас</a></li>
-        <li><a href="#">Контакты</a></li>
-        <li><a href="#">Политика конфиденциальности</a></li>
-    </ul>
-</footer>
+{% include 'components/footer.html' %}
 
 
 </body>

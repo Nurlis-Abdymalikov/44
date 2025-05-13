@@ -1,8 +1,8 @@
   <header>
         <nav class="menu">
             <ul>
-                <li><a href="#">Главная</a></li>
-                <li><a href="tags/all_products.html">Хэштеги</a></li>
+                <li><a href="{% url 'first_home_work' %}">Главная</a></li>
+                <li><a href="{% url 'all_product' %}">Хэштеги</a></li>
                 <li><a href="{% url 'films' %}">Фильмы</a></li>
                 <li><a href="parser_films/parser_film_list.html">Другие фильмы</a></li>
                 <li><a href="parser_films/parser_form.html">Парсинг</a></li>
