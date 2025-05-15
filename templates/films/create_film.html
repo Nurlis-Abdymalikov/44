@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интернет Кинотеатр</title>
+    <link rel="stylesheet" href="{% static 'css/header_and_footer/menu.css' %}">
+    <link rel="stylesheet" href="{% static 'css/film_and_film_detail/cards.css' %}">
+    <link rel="stylesheet" href="{% static 'css/header_and_footer/footer.css' %}">
+</head>
+<body>
+
+<!-- Меню -->
+{% include 'components/header.html' %}
+
+
+
+<!-- Карточки фильмов -->
+<form action="/create_film/" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Добавить фильм</button>
+</form> 
+
+<!-- Футер -->
+{% include 'components/footer.html' %}
+
+
+</body>
+</html>

@@ -23,11 +23,12 @@
     {% for film in films %}
         <div class="card">
             <img src="{{ film.image.url }}" alt="{{ film.title }}">
-            <h3><a href="{% url 'film_detail' film.id %}">{{ film.title }}</a></h3>
+            <h3><a href="/films/{{ i.id }}/">{{ film.title }}</a></h3>
             <p>{{ film.description }}</p>
             <div class="card-buttons">
-                <button class="delete"><a href="#">Удалить</a></button>
-                <button class="edit"><a href="#">Изменить</a></button>
+                <button class="delete"><a href="{% url 'delete_film' film.id %}">Удалить</a></button>
+                <button class="delete"><a href="{% url 'create_film' %}">Добавить</a></button>
+                <button class="edit"><a href="{% url 'update_film' film.id %}">Изменить</a></button>
             </div>
         </div>
     {% endfor %}
