@@ -10,10 +10,12 @@
                 <li><a href="users/login.html">Войти</a></li>
                 <!-- Форма поиска -->
                 <li class="search">
-                    <form>
-                        <input type="text" placeholder="Поиск...">
+
+                    <form action="{% url 'search' %}" method="GET">
+                        <input type="text" type="search" name="q" placeholder="Поиск...">
                         <button type="submit">Поиск</button>
                     </form>
+
                 </li>
             </ul>
         </nav>

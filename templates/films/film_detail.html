@@ -19,16 +19,16 @@
 <!-- о фильме подробнее-->
 <div class="film-detail">
     <div class="film-info">
-        <img src="{{ film_id.image.url }}"
-             alt="Movie Poster" class="film-poster">
+        <img src="{{ object.image.url }}"
+             alt="{{ object.title }}" class="film-poster">
         <div class="film-text">
-            <h1>{{ film_id.title }}</h1>
-            <p><strong>Дата выпуска:</strong> {{ film_id.create_at }}</p>
-            <p><strong>Жанр:</strong> {{ film_id.genre }}</p>
-            <p><strong>Автор:</strong> {{ film_id.author }}</p>
-            <p><strong>Описание:</strong> {{ film_id.description }}</p>
+            <h1>{{ object.title }}</h1>
+            <p><strong>Дата выпуска:</strong> {{ object.create_at }}</p>
+            <p><strong>Жанр:</strong> {{ object.genre }}</p>
+            <p><strong>Автор:</strong> {{ object.author }}</p>
+            <p><strong>Описание:</strong> {{ object.description }}</p>
         </div>
-            <iframe width="640" height="420" src="{{ film_id.audio_film  }}" frameborder="0"></iframe>
+            <iframe width="640" height="420" src="{{ object.audio_film  }}" frameborder="0"></iframe>
 
     </div>
 
@@ -37,7 +37,7 @@
         <h2>Комментарии</h2>
         <div class="comment-list">
             <!--            цикл открытия-->
-            {% for i in film_id.reviews.all %}
+            {% for i in object.reviews.all %}
             <div class="comment">
                 <p><strong>{{ i.user_name }}:</strong>{{ i.text }}</p>
             </div>
