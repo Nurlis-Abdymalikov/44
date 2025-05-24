@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     'first_home_work',
     'films',
     'tags',
+    'parser_app',
 ]
 
 MIDDLEWARE = [
