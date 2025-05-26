@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup as BS
 
-#ссылка для сайта которую мы парсим
+
 URL = 'https://kinovibe.co/'
 
 HEADERS = {
