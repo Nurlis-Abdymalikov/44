@@ -1,19 +1,22 @@
-
-<!-- Карточки фильмов -->
 <section class="cards">
-
-<!-- цикл тут открытие -->
- {% for i in movie %}
+  {% for i in movie %}
     <div class="card">
-        <h3>{{ i.title }}</h3>
+      <h3>{{ i.title }}</h3>
     </div>
- {% endfor %} 
-
-
-
-<!-- цикл тут закрытие -->
-
-
-
-
+  {% endfor %}
 </section>
+
+<!-- Пагинация -->
+<div class="pagination">
+  {% if movie.has_previous %}
+    <a href="?page=1">Первая</a>
+    <a href="?page={{ movie.previous_page_number }}">Назад</a>
+  {% endif %}
+
+  <span>Страница {{ movie.number }} из {{ movie.paginator.num_pages }}</span>
+
+  {% if movie.has_next %}
+    <a href="?page={{ movie.next_page_number }}">Вперёд</a>
+    <a href="?page={{ movie.paginator.num_pages }}">Последняя</a>
+  {% endif %}
+</div>

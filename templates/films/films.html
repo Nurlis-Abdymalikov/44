@@ -32,6 +32,32 @@
             </div>
         </div>
     {% endfor %}
+<div class="pagination">
+    <span class="step-links">
+
+        {% if page_obj.has_previous %}
+            <a href="?page=1{% if q %}&q={{ q }}{% endif %}">&laquo; первая</a>
+            <a href="?page={{ page_obj.previous_page_number }}{% if q %}&q={{ q }}{% endif %}">назад</a>
+        {% else %}
+            <span class="disabled">&laquo; первая</span>
+            <span class="disabled">назад</span>
+        {% endif %}
+
+        <span class="current">
+            Страница {{ page_obj.number }} из {{ page_obj.paginator.num_pages }}.
+        </span>
+
+        {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}{% if q %}&q={{ q }}{% endif %}">вперёд</a>
+            <a href="?page={{ page_obj.paginator.num_pages }}{% if q %}&q={{ q }}{% endif %}">последняя &raquo;</a>
+        {% else %}
+            <span class="disabled">вперёд</span>
+            <span class="disabled">последняя &raquo;</span>
+        {% endif %}
+
+    </span>
+</div>
+
 
 <!-- цикл тут закрытие -->
 
