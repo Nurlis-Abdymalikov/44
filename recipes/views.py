@@ -5,7 +5,6 @@ from django.views import generic
 from django.urls import reverse_lazy
 from .forms import RecipeForm, IngredientForm, IngredientFormSet
 from .models import Recipe, Ingredient
-from .forms import RecipeForm, IngredientForm
 
 class RecipeListView(generic.ListView):
     model = Recipe
@@ -45,15 +44,4 @@ class RecipeDeleteView(generic.DeleteView):
     success_url = reverse_lazy('recipe-list')
     template_name = 'recipes/recipe_confirm_delete.html' 
 
-def add_ingredient(request, pk):
-    recipe = get_object_or_404(Recipe, pk=pk)
-    if request.method == 'POST':
-        form = IngredientForm(request.POST)
-        if form.is_valid():
-            ingredient = form.save(commit=False)
-            ingredient.recipe = recipe
-            ingredient.save()
-            return redirect('recipe-detail', pk=pk)
-    else:
-        form = IngredientForm()
-    return render(request, 'recipes/ingredient_form.html', {'form': form, 'recipe': recipe})
+
